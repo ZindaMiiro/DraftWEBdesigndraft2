@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Patient Information</title>
+    <style>
+        body {
+            background-color: green;
+            color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: lightgreen;
+            color:black;
+            margin: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: lightgreen;
+            color: lightblue;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Patient Information</h1>
+    <form action="edit_patient.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="column">Column to Update:</label>
+        <select name="column" id="column">
+            <option value="SSN">SSN</option>
+            <option value="Username">Username</option>
+            <option value="Name">Name</option>
+            <option value="Number">Number</option>
+            <option value="Address">Address</option>
+            <option value="Email">Email</option>
+            <option value="Date_of_birth">Date of Birth</option>
+        </select>
+
+        <label for="new_value">New Value:</label>
+        <input type="text" name="new_value" id="new_value" required>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
+
